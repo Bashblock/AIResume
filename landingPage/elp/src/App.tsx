@@ -20,7 +20,7 @@ function App() {
           rel="noopener noreferrer"
           className="text-white bg-indigo-600 hover:bg-indigo-700 rounded-md px-6 py-2 transition-colors"
         >
-          Install Now
+          Install   
         </a>
       </div>
     </div>
