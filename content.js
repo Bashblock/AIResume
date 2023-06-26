@@ -1,13 +1,20 @@
-// Fetch the webpage HTML
-var html = document.documentElement.outerHTML;
+// Listen for a click event on any anchor element with the class 'job-card-container__link'
+document.addEventListener('click', function(event) {
+  if(event.target.matches('.job-card-container__link')) {
+    // The user clicked on a job link
 
-// Parse the HTML with Cheerio
-var $ = cheerio.load(html);
+    // Fetch the webpage HTML
+    var html = document.documentElement.outerHTML;
 
-// Select the job descriptions
-var jobDescriptions = $('#job-details').map((i, el) => {
-  return $(el).text();
-}).get();
+    // Parse the HTML with Cheerio
+    var $ = cheerio.load(html);
 
-// Log the job descriptions
-console.log(jobDescriptions);
+    // Select the job descriptions
+    var jobDescriptions = $('#job-details').map((i, el) => {
+      return $(el).text();
+    }).get();
+
+    // Log the job descriptions
+    console.log(jobDescriptions);
+  }
+});
